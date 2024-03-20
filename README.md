@@ -1,1 +1,1 @@
-![Image](./hello-there.gif)
+<img src="./hello-there.gif" style="width:100%;">
