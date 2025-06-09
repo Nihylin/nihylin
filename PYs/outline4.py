@@ -41,7 +41,6 @@ inner_path = [
     (148.4, 108.0)
 ]
 
-#check outline2.py & outline3.py comments to understand this monstrosity
 plt.gca().add_patch(plt.Polygon(outer_path))
 plt.gca().add_patch(plt.Polygon(inner_path))
 plt.axis('off')

@@ -41,9 +41,9 @@ inner_path = [
     (408, 308),
 ]
 
-plt.figure(facecolor='#101820')
+plt.figure(facecolor='#11141A')
 plt.gca().add_patch(plt.Polygon(outer_path, color='white'))
-plt.gca().add_patch(plt.Polygon(inner_path, color='#101820'))
+plt.gca().add_patch(plt.Polygon(inner_path, color='#11141A'))
 plt.axis('off')
 plt.xlim(0, 966)
 plt.ylim(0, 966)

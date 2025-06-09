@@ -24,8 +24,8 @@ points = [
     (350, 250)
 ]
 
-plt.figure(facecolor='#101820')
-plt.gca().add_patch(plt.Polygon(points, color='#F93822'))
+plt.figure(facecolor='#11141A')
+plt.gca().add_patch(plt.Polygon(points, color='#E03925'))
 plt.axis('off')
 plt.xlim(0, 850)
 plt.ylim(0, 850)
