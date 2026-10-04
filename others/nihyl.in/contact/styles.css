@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/************ FONTS ************/
+html {
+  /* Définition 1rem = 10px */
+  font-size: 62.5%;
+}
+
+body {
+  /* 16px */
+  font-size: 1.6rem;
+}
+
+h1 {
+  /* 32px */
+  font-size: 3.2rem;
+}
+
+h2 {
+  /* 24px */
+  font-size: 2.4rem;
+}
+
+h3 {
+  /* 19px */
+  font-size: 1.9rem;
+}
+
+h4 {
+  /* 16px */
+  font-size: 1.6rem;
+}
+
+h5 {
+  /* 13px */
+  font-size: 1.3rem;
+}
+
+h6 {
+  /* 11px */
+  font-size: 1.1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.thin {
+  font-weight: 100;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semibold {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.black {
+  font-weight: 900;
+}
+
+/************ CSS ************/
+
+main {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #131313;
+  color: #f3f3f3;
+}
+
+main h1 {
+  text-align: center;
+  margin: 30px;
+}
+
+main > img {
+  width: 200px;
+  margin: 30px;
+}
+
+.firstList {
+  max-width: 600px;
+  width: 100%;
+}
+
+.firstList > li {
+  margin: 20px;
+  overflow: hidden;
+  /* transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3) 0s; */
+  background: rgba(85, 85, 85, 0.2);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+}
+
+.firstList > li:hover {
+  /* transform: scale(1.02); */
+}
+
+.firstList li img {
+  object-fit: contain;
+  max-width: 30px;
+  margin: 10px;
+}
+
+.firstList > li > a {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  color: white;
+}
+
+.firstList li a p {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+.firstList label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.firstList label::after {
+  content: "❯";
+  width: 1em;
+  text-align: center;
+  transition: all 0.35s;
+  margin-right: 10px;
+}
+
+.firstList .content {
+  max-height: 0;
+  padding: 0 1em;
+  background: white;
+  transition: all 0.35s;
+  color: #222;
+}
+
+.firstList .content svg {
+  color: rgb(172, 181, 191);
+}
+
+.firstList input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.firstList input:checked+label::after {
+  transform: rotate(90deg);
+}
+
+.firstList input:checked~.content {
+  max-height: 100vh;
+  padding: 1em;
+}
+
+.firstList .content ul {
+  max-width: 600px;
+  margin: auto;
+}
+
+.firstList .content ul li {
+  display: flex;
+  padding: 10px;
+}
+
+.firstList .info .content ul li svg {
+  margin-right: 10px;
+  width: 20px;
+}
+
+.firstList .info .content a {
+  color: #222;
+}
+
+.firstList .info .content > a {
+  display: block;
+  text-align: center;
+  width: fit-content;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  text-decoration: none;
+  margin: 10px auto 10px auto;
+  background-color: #e4eef8;
+  transition: all 0.15s;
+}
+
+.firstList .mail .content label {
+  display: unset;
+  justify-content: unset;
+  align-items: unset;
+  cursor: unset;
+}
+
+.firstList .mail .content label::after {
+  all: unset;
+}
+
+.firstList .mail .content ul li {
+  flex-direction: column;
+}
+
+.firstList .mail .content ul li input, .firstList .mail .content textarea {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px black solid;
+  padding: 10px;
+  margin-top: 5px;
+  font-family: 'Inter';
+  font-size: 1.6rem;
+}
+
+.firstList .mail .content ul li input {
+  position: unset;
+  opacity: unset;
+  min-height: 30px;
+}
+
+.firstList .mail .content textarea {
+  max-width: 100%;
+  min-height: 100px;
+  resize: none;
+}
+
+.firstList .mail .content button {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 10px;
+  color: #222;
+  margin: 10px auto 10px auto;
+  font-size: 1.6rem;
+  cursor: pointer;
+  background-color: #e4eef8;
+  transition: all 0.15s;
+}
+
+.firstList .mail .content button:hover, .firstList .info .content > a:hover  {
+  background-color: #314558;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.firstList .resume {
+  display: flex;
+  gap: 15px;
+  background: unset;
+  border-radius: unset;
+  border: unset;
+  box-shadow: unset;
+}
+
+.firstList .resume a {
+  background: rgba(85, 85, 85, 0.2);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.2);
+}
+
+.secondList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  margin-top: auto;
+}
+
+.secondList li {
+  margin: 10px;
+}
+
+.secondList svg {
+  fill: rgb(255, 255, 255);
+  width: 27px;
+  height: 27px;
+  transition: transform 0s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+.secondList svg:hover {
+  transform: scale(1.075);
+}
